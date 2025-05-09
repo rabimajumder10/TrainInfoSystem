@@ -1,0 +1,27 @@
+﻿@* @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Search Train";
+}
+<form method="post" class="row g-3">
+    <div class="col-auto">
+        <input class="form-control" type="text" name="query" placeholder="Enter Train Name or Number" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Search</button>
+    </div>
+</form> *@
+
+
+@{
+    ViewData["Title"] = "Search Train";
+}
+
+<h2>Search for Trains</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="query">Enter Train Name or Number:</label>
+        <input type="text" class="form-control" id="query" name="query" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

@@ -1,0 +1,26 @@
+﻿@* @{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "PNR Status";
+}
+<form method="post" class="row g-3">
+    <div class="col-auto">
+        <input class="form-control" type="text" name="pnr" placeholder="Enter PNR Number" />
+    </div>
+    <div class="col-auto">
+        <button class="btn btn-primary" type="submit">Check Status</button>
+    </div>
+</form> *@
+
+@{
+    ViewData["Title"] = "PNR Status";
+}
+
+<h2>Enter PNR to Check Status</h2>
+
+<form method="post">
+    <div class="form-group">
+        <label for="pnr">Enter PNR Number:</label>
+        <input type="text" class="form-control" id="pnr" name="pnr" required />
+    </div>
+    <button type="submit" class="btn btn-primary">Check Status</button>
+</form>

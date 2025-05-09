@@ -1,0 +1,12 @@
+﻿@model Train
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Add Train";
+}
+<form method="post" class="form-group">
+    <label>Train Number</label>
+    <input class="form-control" type="text" name="TrainNumber" required />
+    <label>Train Name</label>
+    <input class="form-control" type="text" name="TrainName" required />
+    <button class="btn btn-primary mt-2" type="submit">Add Train</button>
+</form>

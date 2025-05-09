@@ -1,0 +1,10 @@
+﻿@model List<Booking>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Confirmed Bookings";
+}
+<h3>Confirmed Bookings</h3>
+@foreach (var booking in Model)
+{
+    <p class="alert alert-primary">@booking.PassengerName | Train: @booking.Train.TrainName | PNR: @booking.PNR.PNRNumber</p>
+}

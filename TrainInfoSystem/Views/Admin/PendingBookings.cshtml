@@ -1,0 +1,26 @@
+﻿@model List<Booking>
+@{
+    Layout = "~/Views/Shared/_Layout.cshtml";
+    ViewData["Title"] = "Pending Bookings";
+}
+<h3>Pending Bookings</h3>
+@foreach (var booking in Model)
+{
+    <div class="card mb-2">
+        <div class="card-body">
+            <p>@booking.PassengerName - @booking.Train.TrainName</p>
+            <form method="post" asp-action="ConfirmBooking" class="row g-2">
+                <input type="hidden" name="bookingId" value="@booking.BookingId" />
+                <div class="col-md-3">
+                    <input class="form-control" type="text" name="coach" placeholder="Coach" required />
+                </div>
+                <div class="col-md-3">
+                    <input class="form-control" type="text" name="berth" placeholder="Berth" required />
+                </div>
+                <div class="col-md-3">
+                    <button class="btn btn-success" type="submit">Confirm</button>
+                </div>
+            </form>
+        </div>
+    </div>
+}
